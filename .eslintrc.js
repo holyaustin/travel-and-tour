@@ -35,13 +35,8 @@ module.exports = {
     "flowtype",
     'jsx',
   ],
-  extends: ["plugin:jsx-control-statements/recommended",
-  "plugin:flowtype/recommended"],
+  extends: ["plugin:flowtype/recommended"],
   rules: {
-    "jsx/uses-factory": [1, {"pragma": "JSX"}],
-    "jsx/factory-in-scope": [1, {"pragma": "JSX"}],
-    "jsx/mark-used-vars": 1,
-    "jsx/no-undef": 1,
     'no-console': 'off',
     'no-alert': 'off',
     'react/jsx-props-no-spreading': 'off',
@@ -60,7 +55,7 @@ module.exports = {
     'import/prefer-default-export': 0,
     'max-len': [
       2,
-      250,
+      1000,
     ],
     'no-multiple-empty-lines': [
       'error',

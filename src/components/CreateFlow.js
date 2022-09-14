@@ -9,7 +9,7 @@ import {
   Spinner,
   Card,
 } from 'react-bootstrap';
-import './createFlow.css';
+import './Superfluid/createFlow.css';
 import { ethers } from 'ethers';
 // let account;
 // where the Superfluid logic takes place
@@ -136,24 +136,24 @@ export const CreateFlow = () => {
   };
 
   return (
-    <div align="center" style={{ padding: '5px 7px 5px 7px', fontSize: '36px' }}>
-      <h2>Get Mapped to a Tour Guide </h2>
+    <div className="mt-10 text-red-500" align="center" style={{ padding: '15px 7px 5px 7px', fontSize: '26px' }}>
+      <h2>Connect wallet </h2>
 
       {currentAccount === '' ? (
         <button type="button" id="connectWallet" size="lg" style={{ padding: '20px 15px 20px 15px', fontSize: '24px', color: 'white', backgroundColor: 'blue' }} onClick={connectWallet}>
-          Connect Wallet
+          Connected Wallet
         </button>
 
       ) : (
-        <Card className="connectedWallet">
+        <Card className="connectedWallet bg-gray-500">
           {`${currentAccount.substring(0, 4)}...${currentAccount.substring(
             38,
           )}`}
         </Card>
       )}
-      <h3>Stream Payment for service in real-time </h3>
-      <Form>
-        <FormGroup className="mb-3">
+      <h3 className=' text-black'>Stream Payment for service in real-time </h3>
+      <Form className='text-2xl'>
+        <FormGroup className="mb-3 w-1/2">
           <FormControl
             name="recipient"
             value={recipient}
@@ -161,7 +161,7 @@ export const CreateFlow = () => {
             placeholder="Enter recipient address"
           />
         </FormGroup>
-        <FormGroup className="mb-3">
+        <FormGroup className="mb-3 w-1/2">
           <FormControl
             name="flowRate"
             value={flowRate}
@@ -171,6 +171,7 @@ export const CreateFlow = () => {
         </FormGroup>
         <CreateButton
           size="lg"
+          className="bg-green-900"
           style={{ padding: '20px 15px 20px 15px', fontSize: '20px' }}
           onClick={() => {
             setIsButtonLoading(true);
@@ -186,7 +187,7 @@ export const CreateFlow = () => {
         </CreateButton>
       </Form>
 
-      <div className="description">
+      <div className="description mb-20">
 
         <div className="calculation">
           <p>Your flow will be equal to:</p>

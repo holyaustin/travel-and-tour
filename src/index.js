@@ -7,6 +7,8 @@ import Explore from './components/Explore';
 import Hire from './components/Hire';
 import Become from './components/Become';
 import Community from './components/Community';
+import View from './components/View';
+import Memory from './components/memory';
 
 const NftDetails = ({ data }) => (
   <div className="nft-cont">
@@ -46,10 +48,12 @@ ReactDOM.render(
   <Router>
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="View" element={<View />} />
       <Route path="Hire" element={<Hire />} />
       <Route path="Become" element={<Become />} />
       <Route path="Community" element={<Community />} />
       <Route path="Explore" element={<Explore />} />
+      <Route path="Memory" element={<Memory />} />
     </Routes>
     <Footer />
   </Router>,

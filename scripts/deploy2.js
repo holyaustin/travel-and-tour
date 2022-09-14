@@ -1,27 +1,15 @@
 const hre = require('hardhat');
-// const { ethers } = require('hardhat');
 const fs = require('fs');
 
 async function main() {
-  const Register = await hre.ethers.getContractFactory('TouristRegister');
-  const register = await Register.deploy();
-  await register.deployed();
-  console.log('Tour Guide register deployed to:', register.address);
+  const Memory = await hre.ethers.getContractFactory('TourMemory');
+  const memory = await Memory.deploy();
+  await memory.deployed();
+  console.log('Memory deployed to:', memory.address);
 
-  const TourTransfer = await hre.ethers.getContractFactory('Transfer');
-  const tourTransfer = await TourTransfer.deploy(register.address);
-  await tourTransfer.deployed();
-  console.log('Transfer deployed to:', tourTransfer.address);
-
-  const config = `
-  export const registeraddress = '${register.address}'
-  export const transferaddress = '${tourTransfer.address}'
-  `;
-
-  const data = JSON.stringify(config);
-  fs.writeFileSync('config.js', JSON.parse(data));
-  const data2 = JSON.stringify(config);
-  fs.writeFileSync('./src/contractconfig.js', JSON.parse(data2));
+  fs.writeFileSync('./config4.js', `
+  export const MemoryAddress = "${memory.address}"
+  `);
 }
 
 main()

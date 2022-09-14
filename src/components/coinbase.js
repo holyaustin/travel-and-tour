@@ -12,7 +12,7 @@ const modules = [coinbaseWalletSdk, walletConnect, injected];
 
 const MAINNET_RPC_URL = 'https://polygon-mainnet.g.alchemy.com/v2/odpZQIbE3xtAii8qMNePX-0M6fyB8G0V';
 const MUMBAI_RPC_URL = 'https://polygon-mumbai.g.alchemy.com/v2/odpZQIbE3xtAii8qMNePX-0M6fyB8G0V';
-const RINKEBY_RPC_URL = 'https://eth-rinkeby.alchemyapi.io/v2/odpZQIbE3xtAii8qMNePX-0M6fyB8G0V';
+const GOERLI_RPC_URL = 'ttps://eth-goerli.g.alchemy.com/v2/8wI2622GcVps389JCO4EOlQhoY_Bh8YP';
 
 const onboard = Onboard({
   wallets: modules, // created in previous step
@@ -36,7 +36,7 @@ const onboard = Onboard({
       token: 'rETH',
       namespace: 'evm',
       label: 'Ethereum Rinkeby Testnet',
-      rpcUrl: RINKEBY_RPC_URL,
+      rpcUrl: GOERLI_RPC_URL,
     },
   ],
   appMetadata: {
@@ -74,14 +74,14 @@ const Coinbase = () => {
           <button
             type="button"
             onClick={connectWallet2}
-            className="flex flex-row justify-center text-white items-center bg-blue-700 pt-3 px-5 cursor-pointer hover:bg-blue-300 hover:text-black"
+            className="flex flex-row justify-center text-white items-center bg-blue-700 p-3 cursor-pointer hover:bg-blue-300 hover:text-black"
           >
             <p className="text-black text-3xl font-semibold hover:text-white">
               Connect Wallet
             </p>
           </button>
 
-          <div className="text-white text-2xl font-semibold">
+          <div className="text-black text-2xl font-semibold">
             <div>Connected Wallet Address: <br /> {account}</div>
 
           </div>

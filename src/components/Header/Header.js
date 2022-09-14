@@ -34,14 +34,15 @@ const Header = ({ onPlaceChanged, onLoad }) => {
           <b>Travel and Tour Assistant </b>
         </Typography>
 
-        <Typography variant="h5" className={classes.title2}>
+        <Typography variant="h6" className={classes.title2}>
           <NavLink
             className="nav-link"
+            to="/"
             style={({ isActive }) => ({
               color: isActive ? '#000' : '#fff',
               background: isActive ? 'white' : '#rrggbbaa',
             })}
-            to="/"
+            
           >
             Home
           </NavLink>
@@ -76,13 +77,13 @@ const Header = ({ onPlaceChanged, onLoad }) => {
         <Typography variant="h6" className={classes.title2}>
           <NavLink
             className="nav-link"
-            to="/Community"
+            to="/Memory"
             style={({ isActive }) => ({
               color: isActive ? '#000' : '#fff',
               background: isActive ? 'white' : '#rrggbbaa',
             })}
           >
-            Mint NFT
+            Mint Memories
           </NavLink>
         </Typography>
 

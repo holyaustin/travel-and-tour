@@ -6,14 +6,14 @@ import { NFTStorage } from 'nft.storage';
 import { useNavigate } from 'react-router-dom';
 import { ethers } from 'ethers';
 import Web3Modal from 'web3modal';
-import Abi from '../api/TourProfile.json';
-import { profileAddress } from '../config3';
+import Abi from '../api/TourMemory.json';
+import { memoryAddress } from '../config4';
 import Header from './Header/Header';
 
 // eslint-disable-next-line max-len
 const APIKEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDA4Zjc4ODAwMkUzZDAwNEIxMDI3NTFGMUQ0OTJlNmI1NjNFODE3NmMiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY1MzA1NjE4NzM4MCwibmFtZSI6InBlbnNpb25maSJ9.agI-2V-FeK_eVRAZ-T6KGGfE9ltWrTUQ7brFzzYVwdM';
 
-const Become = () => {
+const Memory = () => {
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState(null);
   const [uploadedFile, setUploadedFile] = useState();
@@ -21,7 +21,7 @@ const Become = () => {
   const [metaDataURL, setMetaDataURl] = useState();
   const [txURL, setTxURL] = useState();
   const [txStatus, setTxStatus] = useState();
-  const [formInput, updateFormInput] = useState({ name: '', description: '', country: '', city: '', wallet: '', price: '' });
+  const [formInput, updateFormInput] = useState({ name: '', description: '',  price: '' });
 
   const handleFileUpload = (event) => {
     console.log('file for upload selected...');
@@ -33,8 +33,8 @@ const Become = () => {
   };
 
   const uploadNFTContent = async (inputFile) => {
-    const { name, description, country, wallet, city, price } = formInput;
-    if (!name || !description || !country || !wallet || !city || !inputFile) return;
+    const { name, description, price } = formInput;
+    if (!name || !description || !inputFile) return;
     const nftStorage = new NFTStorage({ token: APIKEY });
     try {
       console.log('Trying to upload asset to ipfs');
@@ -43,12 +43,6 @@ const Become = () => {
         name,
         description,
         image: inputFile,
-        properties: {
-          country,
-          city,
-          wallet,
-          price,
-        },
       });
       setMetaDataURl(metaData.url);
       console.log('metadata is: ', { metaData });
@@ -67,8 +61,8 @@ const Become = () => {
       const provider = new ethers.providers.Web3Provider(connection);
 
       const price = ethers.utils.parseUnits(formInput.price, 'ether');
-      const connectedContract = new ethers.Contract(profileAddress, Abi.abi, provider.getSigner());
-      console.log('Connected to contract', profileAddress);
+      const connectedContract = new ethers.Contract(memoryAddress, Abi.abi, provider.getSigner());
+      console.log('Connected to contract', memoryAddress);
       console.log('IPFS blockchain uri is ', metadata.url);
 
       const mintNFTTx = await connectedContract.createToken(metadata.url, price);
@@ -105,7 +99,7 @@ const Become = () => {
     // 3. preview the minted nft
     previewNFT(metaData, mintNFTTx);
 
-   navigate('/View');
+   // navigate('/View');
   };
 
   const getIPFSGatewayURL = (ipfsURL) => {
@@ -118,36 +112,24 @@ const Become = () => {
 
   return (
   
-    <><Header /><div className="flex justify-center bg-blue-300 ">
+    <><Header /><div className="flex justify-center  bg-blue-300 mb-50">
       
-      <div className="w-1/2 flex flex-col pt-8 pb-12 text-center text-2xl">
-      <h1>Register as a Tour Guide</h1>
+      <div className="w-1/2 flex flex-col mt-15 mb-20 pt-8 pb-20 text-center text-2xl">
+      <h1>Mint your Memories as NFTs</h1>
       <input
-          placeholder="Enter your name"
+          placeholder="Give it a Title"
           className="mt-4 border rounded p-2"
           onChange={(e) => updateFormInput({ ...formInput, name: e.target.value })} />
         <input
-          placeholder="Describe yourself briefly"
+          placeholder="Describe the event"
           className="mt-4 border rounded p-2"
           onChange={(e) => updateFormInput({ ...formInput, description: e.target.value })} />
         <input
-          placeholder="Wallet Address"
-          className="mt-4 border rounded p-2"
-          onChange={(e) => updateFormInput({ ...formInput, wallet: e.target.value })} />
-        <input
-          placeholder="Enter your City name here"
-          className="mt-4 border rounded p-2"
-          onChange={(e) => updateFormInput({ ...formInput, city: e.target.value })} />
-        <input
-          placeholder="Enter your Counrtry Name Here"
-          className="mt-4 border rounded p-2"
-          onChange={(e) => updateFormInput({ ...formInput, country: e.target.value })} />
-        <input
-          placeholder="Enter price per day in USD"
+          placeholder="Enter price in USD"
           className="mt-4 border rounded p-2"
           onChange={(e) => updateFormInput({ ...formInput, price: e.target.value })} />
             <form className='pt-4'>
-              <h3>Select a picture / avatar for your profile </h3>
+              <h3>Select the picture </h3>
               <input type="file" onChange={handleFileUpload} className="mt-1 border rounded p-4 text-xl w-full" />
             </form>
             {txStatus && <p>{txStatus}</p>}
@@ -171,12 +153,12 @@ const Become = () => {
                 width="100%" />
             )}
 
-          <button type="button" onClick={(e) => mintNFTToken(e, uploadedFile)} className="font-bold bg-blue-500 text-white text-2xl rounded p-2 shadow-lg">
-            Register Profile
+          <button type="button" onClick={(e) => mintNFTToken(e, uploadedFile)} className="font-bold bg-blue-500 text-white text-2xl rounded p-2 shadow-lg mb-32">
+            Mint Memory as NFT
           </button>
       </div>  
       </div></>
   
   );
 };
-export default Become;
+export default Memory;

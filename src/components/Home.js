@@ -1,6 +1,7 @@
 /* eslint-disable no-alert */
 import React from 'react';
 // import { Card } from 'react-bootstrap';
+// import { WorldIDWidget } from "@worldcoin/id";
 import styled from 'styled-components';
 import Header from './Header/Header';
 import Feature from './Feature';
@@ -64,24 +65,30 @@ function Home() {
           <div className="col-lg-6 ">
             <p>
               <a href="/Explore" target="_self" rel="noreferrer">
-                <Button id="btn-login" variant="primary" size="lg" style={{ width: '100%', padding: '10px 7px 10px 7px', backgroundColor: 'red', fontSize: '26px' }}> Explore Africa</Button>
+                <Button id="btn-login" variant="primary" size="lg" style={{ width: '100%', padding: '20px 7px 20px 7px', backgroundColor: 'red', fontSize: '26px' }}> Explore Africa with our Map</Button>
+              </a>
+            </p>
+
+            <p>
+              <a href="/Explore" target="_self" rel="noreferrer">
+                <Button id="btn-login" variant="primary" size="lg" style={{ width: '100%', padding: '20px 7px 20px 7px', backgroundColor: 'red', fontSize: '26px' }}> Verify Personhood with World Coin</Button>
               </a>
             </p>
 
           </div>
 
-          <div className="col-lg-5" style={{ color: 'black', fontWweight: '400' }}>
+          <div className="col-lg-5" style={{ color: 'black', fontWweight: '500' }}>
             <h1 className="font-extrabold font-sans text-4xl font text-blue-900"><b> Hire a Tourist Assistant</b> </h1>
             <br />   <br />
-            <h4 align="justify">
+            <h4 align="justify" className='text-2xl font text-blue-900 font-bold' >
+            <p>
               You do not have to be on that vacation without a tourist guide.
-              This system maps you to a guide that tours you around. The tourist guide
-              helps to answer questions as you tour around the location you are in.
-              All you need is your Web3 wallet and you have a tour guide to experience
-              the best tour ever.
+              This system helps you to choose a guide that tours you around. The tourist guide helps to answer questions as you tour around the location you are in. All you need is your Web3 wallet and you have a tour guide to experience the best tour ever.
+              </p>
             </h4>
             <div>
               <Coinbase />
+
               {/**
               {currentAccount === '' ? (
                 <Button type="button" onClick={connectWallet} variant="primary" size="lg" className="font-extrabold " style={{ width: '100%', padding: '25px 7px 25px 7px', fontSize: '36px' }}> Connect Wallet </Button>

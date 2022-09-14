@@ -6,7 +6,7 @@ import { CreateFlow } from './CreateFlow';
 
 export default function Hire() {
   return (
-    <div className="App">
+    <div className="App bg-blue-300">
       <Header />
       <CalculateFlowRate />
       <CreateFlow />

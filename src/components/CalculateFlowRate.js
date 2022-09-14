@@ -28,24 +28,25 @@ export const CalculateFlowRate = () => {
   };
 
   return (
-    <div align="center">
+    <div className="mt-2 text-black mb-3" align="center" style={{ padding: '5px 7px 5px 7px', fontSize: '26px' }}>
       <h2>Calculate Your FlowRate</h2>
       <Form>
-        <FormGroup className="mb-3">
+        <FormGroup className="mb-3 w-1/2">
           <FormControl
             name="recipient"
             value={amount}
             onChange={handleAmountChange}
-            placeholder="Enter an amount per week in dollars using stablecoins "
+            placeholder="Enter an amount per week in USD"
           />
         </FormGroup>
         {/* <Button onClick={() => deleteFlow(recipient)}> */}
         <Button
           variant="success"
+          style={{ padding: '20px 15px 20px 15px', fontSize: '20px' }}
           onClick={() => {
             calculateFlowRate(amount);
           }}
-          className="calculateButton"
+          className="calculateButton bg-green-800"
         >
           Click to Calculate Your FlowRate
         </Button>
