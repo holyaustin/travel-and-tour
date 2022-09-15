@@ -21,21 +21,33 @@ Demo Links / Urls
 
 [travel-and-tour.vercel.app](https://travel-and-tour.vercel.app/)
 
+[Youtube link](https://youtu.be/4LUFjHeRyiM)
+
 Setup: run ```npm i && npm start``` to start the development server
 
-RPC1: https://matic-mumbai.chainstacklabs.com
-RPC2: https://polygon-mumbai.g.alchemy.com/v2/your-Alchemy-key
+Goerli Smartcontract 1: https://goerli.etherscan.io/address/0x3f114ab8b72d0e075bA3418F1Ea0d6D6d9699ED7
+
+Goerli Smartcontract 2: https://goerli.etherscan.io/address/0x11d839acbe82440228f0cd14922a3092f7caeac7
 
 ![Background image2](https://bafybeidivlr5bry6lwftwttg5twsubew7trhm5fj3bvs3zbjxvt7cuomta.ipfs.nftstorage.link/)
 
 # Tech used
 Rapid API: Travel Advisor API
+
 Rapid API:  Open Weather Map API 
+
 Material UI
+
 React JS
+
 Google Map Javascript API Key: 
+
 World ID: https://id.worldcoin.org/use?action_id=0xa6D6f4556B022c0C7051d62E071c0ACecE5a1228&signal=0x0000000000000000000000000000000000000000&app_name=travel-and-tour-assistant&return_to=https://travel-and-tour.vercel.app/
+
 Coinbasae Wallet
+
 Solidity
+
 Goerli Testnet
+
 Superfluid Money streaming

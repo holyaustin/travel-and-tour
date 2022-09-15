@@ -97,15 +97,15 @@ export default function Sender() {
                   <p className="text-gray-800">Brief Description: {nft.description}</p>
                 </div>
                 <p style={{ height: "34px" }} className="text-xl font-semibold">Country: {nft.country}</p>
-                <div style={{ height: "40px", overflow: "hidden" }}>
-                  <p className="text-gray-700">Wallet: {nft.wallet}</p>
+                <div style={{ height: "50px", overflow: "hidden" }}>
+                  <p className="text-gray-700">ETH Wallet Address: {nft.wallet}</p>
                 </div>
-                <p className="text-xl font-bold text-white"> City: {nft.city}</p>
+                <p className="text-xl font-bold text-red-500"> City: {nft.city}</p>
                 <p className="text-xl font-bold text-black">Amount per day {nft.price} USD</p>
               </div>
 
               <div className="p-2 bg-black">
-                <button type="button" className="mt-4 w-full bg-blue-800 text-white font-bold py-2 px-12 rounded" onClick={() => StreamPayment(nft)}>Hire this Tour Guide</button>
+                <button type="button" className=" w-full bg-blue-800 text-white font-bold py-2 px-12 rounded" onClick={() => StreamPayment(nft)}>Hire this Tour Guide</button>
               </div>
             </div>
           ))}

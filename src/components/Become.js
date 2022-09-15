@@ -131,7 +131,7 @@ const Become = () => {
           className="mt-4 border rounded p-2"
           onChange={(e) => updateFormInput({ ...formInput, description: e.target.value })} />
         <input
-          placeholder="Wallet Address"
+          placeholder="ETH Wallet Address"
           className="mt-4 border rounded p-2"
           onChange={(e) => updateFormInput({ ...formInput, wallet: e.target.value })} />
         <input

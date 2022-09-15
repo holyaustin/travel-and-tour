@@ -51,19 +51,6 @@ const Header = ({ onPlaceChanged, onLoad }) => {
         <Typography variant="h6" className={classes.title2}>
           <NavLink
             className="nav-link"
-            to="/Hire"
-            style={({ isActive }) => ({
-              color: isActive ? '#000' : '#fff',
-              background: isActive ? 'white' : '#rrggbbaa',
-            })}
-          >
-            Hire a Tour Guide
-          </NavLink>
-        </Typography>
-
-        <Typography variant="h6" className={classes.title2}>
-          <NavLink
-            className="nav-link"
             to="/Become"
             style={({ isActive }) => ({
               color: isActive ? '#000' : '#fff',
@@ -71,6 +58,19 @@ const Header = ({ onPlaceChanged, onLoad }) => {
             })}
           >
             Become a Tour Guide
+          </NavLink>
+        </Typography>
+        
+        <Typography variant="h6" className={classes.title2}>
+          <NavLink
+            className="nav-link"
+            to="/View"
+            style={({ isActive }) => ({
+              color: isActive ? '#000' : '#fff',
+              background: isActive ? 'white' : '#rrggbbaa',
+            })}
+          >
+            Hire a Tour Guide
           </NavLink>
         </Typography>
 
