@@ -70,8 +70,8 @@ function Home() {
             </p>
 
             <p>
-              <a href="/Explore" target="_self" rel="noreferrer">
-                <Button id="btn-login" variant="primary" size="lg" style={{ width: '100%', padding: '20px 7px 20px 7px', backgroundColor: 'red', fontSize: '26px' }}> Verify Personhood with World Coin</Button>
+              <a href="https://id.worldcoin.org/use?action_id=0xa6D6f4556B022c0C7051d62E071c0ACecE5a1228&signal=0x0000000000000000000000000000000000000000&app_name=travel-and-tour-assistant&return_to=https://travel-and-tour.vercel.app/" target="_new" rel="noreferrer">
+                <Button id="btn-login" variant="primary" size="lg" style={{ width: '100%', padding: '20px 7px 20px 7px', backgroundColor: 'red', fontSize: '26px' }}> Verify Personhood with World ID</Button>
               </a>
             </p>
 

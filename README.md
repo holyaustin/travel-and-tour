@@ -1,7 +1,11 @@
 # Travel-and-Tour-Assistant
 
 ## Introduction
-Build and Deploy an advanced Travel Companion Application using Google Maps. With Geolocation, Google Maps API, Searching for places, Fetching restaurants, hotels and attractions based on location from specialized Rapid APIs, data filtering and much more, this Travel Advisor App is the best Maps Application that you can currently find on YouTube and on the entire internet.
+From 2019 to 2021, Statisctics have it that Africa welcomed about 94,000 tourists. The tourism and hospitality industry need to be integrated into web3. We Built and Deployed an advanced Travel Companion Application using Google Maps. With Geolocation, Google Maps API, Searching for places, Fetching restaurants, hotels and attractions based on location from specialized Rapid APIs, data filtering and much more, this Travel Advisor App is the best Maps DApp built for Web3 and helps you even mint your travel memories as NFTs.
+
+![Background image](https://bafkreigrzeg6tct7gi7mwztztiym7zrjo7i5gtsorluhaaxjnlvmawkf6i.ipfs.nftstorage.link/)
+
+
 
 # Travel-and-Tour-Assistant
 Travel and Tour Assistant
@@ -13,14 +17,25 @@ An intending tourist guide can register on the site and will get mapped or assig
 
 The smart contract was written in solidity to control the registration and streaming of rewards to tour guides from users. the front end was done using the React. The Mapping services was done using google API services, the weather services was also gotten from the Rapid API. Rapid API also was used to get the list of Covid-19 details. 
 
+Demo Links / Urls
+
+[travel-and-tour.vercel.app](https://travel-and-tour.vercel.app/)
+
 Setup: run ```npm i && npm start``` to start the development server
 
 RPC1: https://matic-mumbai.chainstacklabs.com
 RPC2: https://polygon-mumbai.g.alchemy.com/v2/your-Alchemy-key
 
+![Background image2](https://bafybeidivlr5bry6lwftwttg5twsubew7trhm5fj3bvs3zbjxvt7cuomta.ipfs.nftstorage.link/)
 
+# Tech used
 Rapid API: Travel Advisor API
 Rapid API:  Open Weather Map API 
 Material UI
 React JS
 Google Map Javascript API Key: 
+World ID: https://id.worldcoin.org/use?action_id=0xa6D6f4556B022c0C7051d62E071c0ACecE5a1228&signal=0x0000000000000000000000000000000000000000&app_name=travel-and-tour-assistant&return_to=https://travel-and-tour.vercel.app/
+Coinbasae Wallet
+Solidity
+Goerli Testnet
+Superfluid Money streaming
